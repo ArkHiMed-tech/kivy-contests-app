@@ -1,0 +1,2 @@
+# kivy-contests-app
+ 
