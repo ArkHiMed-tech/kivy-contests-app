@@ -1,0 +1,27 @@
+#:kivy 2.1.0
+<ListScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: 1, .08
+            pos_hint: {'x': 0, 'top': 1}
+            Button:
+                text: "< Previous"
+            Button:
+                text: "Next >"
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.height if self.height >= root.height else root.height
+                Button:
+                    text: "hello"
